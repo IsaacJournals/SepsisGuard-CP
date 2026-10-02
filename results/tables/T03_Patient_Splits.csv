@@ -1,0 +1,7 @@
+Split,Site,Patients,SepticPatients,Rows,PositiveRows,Role
+TR,A,12202,1074,474382,10266,model fitting
+VF,A,2033,179,78805,1703,"ensemble weights, calibrator, thresholds, early stopping"
+VC,A,2034,179,79936,1730,conformal quantiles only
+TE,A,4067,358,157092,3437,untouched internal test
+B_CAL,B,4000,228,153625,2148,site-B recalibration experiments only
+B_TE,B,16000,914,608370,8632,untouched external test

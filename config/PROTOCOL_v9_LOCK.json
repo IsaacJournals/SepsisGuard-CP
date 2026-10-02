@@ -1,0 +1,40 @@
+{
+  "sha256": "141a17934f7f3b326b1d23070fcd918243ffc4238b8e4c9070378c9cdc3f3827",
+  "locked_at": "2026-10-01 16:18:47",
+  "protocol": {
+    "version": "v9.0",
+    "written": "2026-10-01",
+    "directions": [
+      "A->B",
+      "B->A"
+    ],
+    "split": "development site patients 60/10/10/20 (TRAIN/VA_FIT/VA_CONF/TEST), external site 20/80 (LOCAL_CAL/EXTERNAL_TEST), stratified by septic status, seed 42",
+    "primary_model_rule": "Candidates in order of simplicity: LightGBM_noTime (no ICULOS/HospAdmTime), LightGBM, LightGBM_tuned, Ensemble. Primary = first candidate whose VA_FIT AUPRC >= (best VA_FIT AUPRC - 0.01). Selection uses VA_FIT only.",
+    "calibration": "Platt on VA_FIT",
+    "conformal": "Mondrian and class-conditional patient-level split conformal on VA_CONF, alpha 0.10",
+    "alarm_threshold": "burden-matched: lowest threshold with <= 0.20 alarm episodes per non-septic patient-day on VA_FIT",
+    "clinical_endpoint": "share of evaluable septic patients alarmed within 48 h before t_sepsis (up to +3 h) at the burden-matched threshold",
+    "comparator_score": "NEWS2_partial at its own burden-matched threshold",
+    "local_budgets": [
+      25,
+      50,
+      100,
+      200,
+      400,
+      800,
+      1600,
+      "ALL"
+    ],
+    "recalibration_arm": "Platt + conformal + burden-matched threshold re-estimated on n local patients",
+    "retraining_arm": "LightGBM (primary's feature set) trained on development TRAIN + half of the n local patients; Platt + conformal + threshold on the other half; budgets 100, 400, 1600, ALL",
+    "hypotheses": {
+      "H1_coverage_breaks": "Unchanged transfer: patient-level septic coverage < 0.85 (nominal 0.90) in BOTH directions",
+      "H2_local_fix": "Recalibration on ALL local patients: patient-level septic coverage >= 0.85 in BOTH directions",
+      "H3_budget": "Smallest n with mean ECE <= unchanged ECE AND Mondrian septic coverage >= 0.85 is <= 800 in BOTH directions",
+      "H4_clinical": "Primary model detects more septic patients than NEWS2_partial at matched burden on the internal test (95% CI of difference > 0) in BOTH directions",
+      "H5_retrain": "Retraining vs recalibration at ALL local patients: external AUROC difference reported with 95% CI (no directional hypothesis)"
+    },
+    "bootstrap": "patient-cluster, 1000 reps (FULL)",
+    "status": "exploratory relative to v8 (A and B already analysed); confirmatory for B->A and retraining"
+  }
+}

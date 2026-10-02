@@ -1,0 +1,14 @@
+{
+  "name": "PhysioNet/Computing in Cardiology Challenge 2019: Early Prediction of Sepsis from Clinical Data",
+  "version": "1.0.0",
+  "doi": "10.13026/v64v-d857",
+  "license": "CC BY 4.0",
+  "url": "https://physionet.org/content/challenge-2019/1.0.0/",
+  "source_mirror": "s3://physionet-open/challenge-2019/1.0.0/training/",
+  "citation": "Reyna MA et al. Crit Care Med 2020;48(2):210-217. doi:10.1097/CCM.0000000000004145",
+  "files_A": 20336,
+  "files_B": 20000,
+  "format": "pipe-separated .psv, one file per ICU stay",
+  "accessed": "2026-10-01",
+  "local_root": "/content/drive/MyDrive/sepsisguard_data"
+}

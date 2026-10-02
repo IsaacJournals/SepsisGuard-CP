@@ -1,0 +1,16 @@
+Check,Count
+"duplicate (patient, ICULOS) rows",0
+non-increasing ICULOS within patient,0
+ICULOS gaps > 1 h within patient,0
+label 1 -> 0 reversals within patient,0
+missing SepsisLabel,0
+"HR outside [10,300]",0
+"O2Sat outside [10,100]",0
+"Temp outside [20,45]",2
+"SBP outside [20,300]",0
+"MAP outside [10,300]",0
+"Resp outside [1,100]",0
+"pH outside [6.5,8.0]",0
+"Lactate outside [0,40]",0
+"WBC outside [0,500]",0
+"Platelets outside [0,3000]",0

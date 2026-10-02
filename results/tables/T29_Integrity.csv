@@ -1,0 +1,13 @@
+Check,Passed
+Mode is FULL_PAPER_RUN,True
+All stages completed without failure,True
+Patient sets disjoint (TR/VF/VC/TE/B_CAL/B_TE),True
+Features strictly past-only (causality assertion passed),True
+Feature equivalence with reference implementation passed,True
+Utility implementation matches reference loop,True
+Imputation/scaling fitted on TRAIN only,True
+"Weights, calibrator, thresholds, GRU early stopping on VA_FIT only",True
+Conformal quantiles on VA_CONF only,True
+A test and B test never used for fitting or selection,True
+No synthetic data in any table,True
+No NaN in headline metrics,True

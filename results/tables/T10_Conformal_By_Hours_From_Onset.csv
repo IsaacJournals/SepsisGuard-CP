@@ -1,0 +1,49 @@
+Split,Method,HoursFromOnset,Rows,Coverage
+A_test,mondrian,<= -12 h,15364,0.5432829992189534
+A_test,mondrian,"(-12,-6] h",1854,0.5846817691477886
+A_test,mondrian,"(-6,0] h",2148,0.87243947858473
+A_test,mondrian,"(0,3] h",931,0.8893662728249194
+A_test,mondrian,> 3 h,0,
+A_test,mondrian,non-septic patients,136795,0.9466427866515589
+A_test,patient_mondrian,<= -12 h,15364,0.7408877896381151
+A_test,patient_mondrian,"(-12,-6] h",1854,0.7637540453074434
+A_test,patient_mondrian,"(-6,0] h",2148,0.9422718808193669
+A_test,patient_mondrian,"(0,3] h",931,0.9441460794844253
+A_test,patient_mondrian,> 3 h,0,
+A_test,patient_mondrian,non-septic patients,136795,0.9865199751452904
+A_test,marginal,<= -12 h,15364,0.5926191096068733
+A_test,marginal,"(-12,-6] h",1854,0.45738942826321466
+A_test,marginal,"(-6,0] h",2148,0.0
+A_test,marginal,"(0,3] h",931,0.0
+A_test,marginal,> 3 h,0,
+A_test,marginal,non-septic patients,136795,0.9618626411784057
+A_test,patient,<= -12 h,15364,0.8862926321270502
+A_test,patient,"(-12,-6] h",1854,0.6952535059331176
+A_test,patient,"(-6,0] h",2148,0.0
+A_test,patient,"(0,3] h",931,0.0
+A_test,patient,> 3 h,0,
+A_test,patient,non-septic patients,136795,0.9952264337146826
+B_test_unchanged,mondrian,<= -12 h,40387,0.7880010894594796
+B_test_unchanged,mondrian,"(-12,-6] h",4390,0.7421412300683371
+B_test_unchanged,mondrian,"(-6,0] h",5443,0.619511298916039
+B_test_unchanged,mondrian,"(0,3] h",2275,0.6698901098901099
+B_test_unchanged,mondrian,> 3 h,0,
+B_test_unchanged,mondrian,non-septic patients,555875,0.9790870249606476
+B_test_unchanged,patient_mondrian,<= -12 h,40387,0.9349295565404709
+B_test_unchanged,patient_mondrian,"(-12,-6] h",4390,0.8879271070615035
+B_test_unchanged,patient_mondrian,"(-6,0] h",5443,0.7802682344295425
+B_test_unchanged,patient_mondrian,"(0,3] h",2275,0.8131868131868132
+B_test_unchanged,patient_mondrian,> 3 h,0,
+B_test_unchanged,patient_mondrian,non-septic patients,555875,0.9946948504609849
+B_test_unchanged,marginal,<= -12 h,40387,0.8304157278332137
+B_test_unchanged,marginal,"(-12,-6] h",4390,0.6355353075170843
+B_test_unchanged,marginal,"(-6,0] h",5443,0.0
+B_test_unchanged,marginal,"(0,3] h",2275,0.0
+B_test_unchanged,marginal,> 3 h,0,
+B_test_unchanged,marginal,non-septic patients,555875,0.9844371486395322
+B_test_unchanged,patient,<= -12 h,40387,0.9900215415851635
+B_test_unchanged,patient,"(-12,-6] h",4390,0.778132118451025
+B_test_unchanged,patient,"(-6,0] h",5443,0.0
+B_test_unchanged,patient,"(0,3] h",2275,0.0
+B_test_unchanged,patient,> 3 h,0,
+B_test_unchanged,patient,non-septic patients,555875,0.9991508882392625

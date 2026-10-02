@@ -1,0 +1,9 @@
+Direction,Candidate,VA_FIT_AUPRC,WithinMargin,Selected
+AtoB,LightGBM_noTime,0.07989491707929985,False,False
+AtoB,LightGBM,0.10812655021421935,False,False
+AtoB,LightGBM_tuned,0.12168199175042427,True,True
+AtoB,Ensemble,0.10591225748278504,False,False
+BtoA,LightGBM_noTime,0.10964437542424213,False,False
+BtoA,LightGBM,0.1342188024684593,False,False
+BtoA,LightGBM_tuned,0.15752769440595915,True,True
+BtoA,Ensemble,0.13370777027614192,False,False
