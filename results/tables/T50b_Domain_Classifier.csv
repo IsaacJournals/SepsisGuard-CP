@@ -1,0 +1,37 @@
+Part,Item,Value,Rows,Status
+domain AUROC,all features,0.9998784656887556,400000.0,post hoc diagnostic analysis
+domain AUROC,measurement-agnostic,0.9997320775822892,400000.0,post hoc diagnostic analysis
+domain AUROC,"measurement-agnostic, divergent variables removed",0.9989796288953621,400000.0,post hoc diagnostic analysis
+gain share by feature family (all features),window_12_24h,0.5741556188216856,,post hoc diagnostic analysis
+gain share by feature family (all features),last_observed,0.30314950532892126,,post hoc diagnostic analysis
+gain share by feature family (all features),window_6h,0.06531432989611062,,post hoc diagnostic analysis
+gain share by feature family (all features),static_context,0.03556169575248037,,post hoc diagnostic analysis
+gain share by feature family (all features),delta,0.015627313335238376,,post hoc diagnostic analysis
+gain share by feature family (all features),current,0.004863131995866387,,post hoc diagnostic analysis
+gain share by feature family (all features),missingness,0.0010790086190995527,,post hoc diagnostic analysis
+gain share by feature family (all features),clinical_composite,0.0002493962505977898,,post hoc diagnostic analysis
+top features (all features),HCO3_mean24,0.41112108912897477,,post hoc diagnostic analysis
+top features (all features),HCO3_last,0.2334907196381912,,post hoc diagnostic analysis
+top features (all features),DBP_mean6,0.044812711242265386,,post hoc diagnostic analysis
+top features (all features),DBP_mean12,0.04244997063180437,,post hoc diagnostic analysis
+top features (all features),BaseExcess_mean12,0.02637265930793452,,post hoc diagnostic analysis
+top features (all features),Calcium_mean24,0.02488678654418476,,post hoc diagnostic analysis
+top features (all features),BaseExcess_mean24,0.02266674492841951,,post hoc diagnostic analysis
+top features (all features),Calcium_last,0.01974152823299638,,post hoc diagnostic analysis
+top features (all features),EtCO2_last,0.017773912091943758,,post hoc diagnostic analysis
+top features (all features),Age,0.017059432366184093,,post hoc diagnostic analysis
+top features (all features),HospAdmTime,0.012334508468850142,,post hoc diagnostic analysis
+top features (all features),MAP_mean6,0.009948251396490587,,post hoc diagnostic analysis
+top features (all features),HCO3_delta,0.00987883797473149,,post hoc diagnostic analysis
+top features (all features),BaseExcess_last,0.00841089308532102,,post hoc diagnostic analysis
+top features (all features),MAP_mean12,0.007805311307129323,,post hoc diagnostic analysis
+top features (all features),DBP_mean24,0.007084192273299539,,post hoc diagnostic analysis
+top features (all features),TroponinI_last,0.004882483992819656,,post hoc diagnostic analysis
+top features (all features),Glucose_last,0.00442997584617559,,post hoc diagnostic analysis
+top features (all features),Unit1,0.0042327985523009665,,post hoc diagnostic analysis
+top features (all features),Glucose_mean24,0.004143160321533495,,post hoc diagnostic analysis
+top features (all features),Temp_last,0.003958647820636723,,post hoc diagnostic analysis
+top features (all features),BaseExcess_mean6,0.002886001242871014,,post hoc diagnostic analysis
+top features (all features),MAP_last,0.0024680029296792194,,post hoc diagnostic analysis
+top features (all features),FiO2_mean12,0.002157683054860761,,post hoc diagnostic analysis
+top features (all features),FiO2_mean24,0.002006475309571235,,post hoc diagnostic analysis

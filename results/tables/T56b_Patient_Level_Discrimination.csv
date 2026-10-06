@@ -1,0 +1,7 @@
+Direction,Setting,Patients,SepticPatients,Patient_AUROC,Patient_ObservedRisk,Patient_MeanPredicted,Status
+AtoB,internal_test,4024,315,0.8517475724000394,0.07828031809145129,0.07864139126400937,post hoc diagnostic analysis
+AtoB,external_unchanged,15820,734,0.7776734009300357,0.046396965865992415,0.03693813871404957,post hoc diagnostic analysis
+AtoB,external_recalibrated_ALL,15820,734,0.7776734009300357,0.046396965865992415,0.04540574752175057,post hoc diagnostic analysis
+BtoA,internal_test,3960,188,0.8717798842535142,0.047474747474747475,0.04201676365833254,post hoc diagnostic analysis
+BtoA,external_unchanged,16106,1269,0.7504231827731589,0.07879051285235315,0.07559622195611403,post hoc diagnostic analysis
+BtoA,external_recalibrated_ALL,16106,1269,0.7504231827731589,0.07879051285235315,0.07766228992228966,post hoc diagnostic analysis

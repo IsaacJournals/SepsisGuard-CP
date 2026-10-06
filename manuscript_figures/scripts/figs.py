@@ -28,9 +28,10 @@ arr(31.5,5,36,41); arr(31.5,5,36,29)
 box(69,39,30,10,"Arm 1: unchanged transfer\n(model, calibration,\nquantiles, threshold)",fs=6.5)
 box(69,27,30,10,"Arm 2: local recalibration\non n patients (n = 25 … all;\n30 resamples per n)",fs=6.5)
 box(69,14,30,10,"Arm 3: retraining +\nrecalibration\n(n = 100, 400, 1,600, all)",fs=6.5)
-box(69,0,30,11,"Endpoints: AUROC, AUPRC, ECE,\nclass-conditional coverage,\ndetection ≤48 h at ≤0.20 false\nalarm episodes per patient-day",fs=6.3)
+box(69,0,30,11,"Endpoints: AUROC, AUPRC,\ncalibration intercept and slope,\nclass-conditional coverage, detection\n≤48 h at ≤0.20 false alarms/patient-day",fs=6.0)
 for y in (44,32,19): arr(64.5,30,69,y)
 ax.text(50,16,"Run in both directions\nA → B and B → A\nunder one protocol\n(SHA-256 locked\nbefore analysis)",ha="center",va="center",fontsize=6.8,style="italic")
+box(36,1,28,9,"Post hoc: causes of miscalibration\n(prevalence, case mix, recording\npractice); net benefit",fc="#f6f6f6",fs=6.0)
 save(f,"Fig1_Study_Design")
 
 # ---------- Fig 2: discrimination forest ----------
@@ -67,7 +68,7 @@ for a,d in zip(axs,["AtoB","BtoA"]):
     a.grid(axis="x",visible=False)
 axs[0].set_ylabel("Patient-level class-conditional coverage")
 h,l=axs[0].get_legend_handles_labels(); f.legend(h,l,loc="lower center",fontsize=6.8,ncol=2,bbox_to_anchor=(0.5,-0.02))
-f.tight_layout(rect=(0,0.07,1,1)); save(f,"Fig3_Class_Conditional_Coverage")
+f.tight_layout(rect=(0,0.07,1,1)); save(f,"Fig4_Class_Conditional_Coverage")
 
 # ---------- Fig 4: clinical endpoint ----------
 cl=pd.read_csv(T+"T42_v9_Clinical_Endpoint.csv"); eq=pd.read_csv(T+"T47_v91_H4_Equal_Burden_vs_NEWS2.csv")
@@ -100,7 +101,7 @@ gen=[Line2D([],[],marker="o",ls="",color="k",label="Internal test, protocol thre
      Line2D([],[],marker="D",ls="",color="k",label="External test, local recalibration + threshold"),
      Line2D([],[],marker="o",ls="",color=G,label="Partial NEWS2 (grey)")]
 f.legend(handles=gen,loc="lower center",ncol=3,fontsize=6.5,bbox_to_anchor=(0.5,-0.1))
-f.tight_layout(rect=(0,0.06,1,1)); save(f,"Fig4_Clinical_Endpoint")
+f.tight_layout(rect=(0,0.06,1,1)); save(f,"Fig5_Clinical_Endpoint")
 
 # ---------- Fig 5: budget curve (percentile bands, degenerate shaded) ----------
 raw=pd.read_csv(T+"T44b_v9_Recalibration_Budget_Raw.csv"); rob=pd.read_csv(T+"T48_v91_Budget_Robustness_Degeneracy.csv")
@@ -121,7 +122,7 @@ axs[0].set_title("Patient-level septic coverage",fontsize=8); axs[1].set_title("
 axs[1].set_ylabel("ECE")
 axs[2].axhline(80,ls="--",c=G,lw=0.8); axs[2].set_ylabel("Resamples meeting H3 criteria (%)"); axs[2].set_title("Share of simulated sites",fontsize=8); axs[2].set_ylim(0,105)
 axs[2].legend(fontsize=7,loc="lower right")
-f.tight_layout(); save(f,"Fig5_Recalibration_Budget")
+f.tight_layout(); save(f,"Fig7_Recalibration_Budget")
 
 # ---------- Fig 6: retrain vs recalibrate ----------
 rt=pd.read_csv(T+"T45_v9_Retrain_vs_Recalibrate.csv")
@@ -134,5 +135,5 @@ for d in ["AtoB","BtoA"]:
         a.axhline(ref[k],ls=":",lw=1,color=C[d],label=f"{LAB[d]} recalibrate only (all local)")
 for a,k in zip(axs,["External AUROC","Septic patients alarmed within 48 h"]): a.set_xscale("log"); a.set_xlabel("Labeled local patients"); a.set_ylabel(k)
 axs[0].legend(fontsize=6.3,loc="upper left")
-f.tight_layout(); save(f,"Fig6_Retrain_vs_Recalibrate")
+f.tight_layout(); save(f,"Fig8_Retrain_vs_Recalibrate")
 print("ok")

@@ -1,0 +1,9 @@
+Direction,Candidate,VA_FIT_AUPRC,VA_CONF_AUPRC,Selected_locked_rule_VA_FIT,Selected_same_rule_on_VA_CONF,Status
+AtoB,LightGBM_noTime,0.07989491707929985,0.0812312353090533,False,False,post hoc diagnostic analysis
+AtoB,LightGBM,0.10812655021421935,0.11111842383345553,False,True,post hoc diagnostic analysis
+AtoB,LightGBM_tuned,0.12168199175042427,0.11199175442991648,True,False,post hoc diagnostic analysis
+AtoB,Ensemble,0.10591225748278504,0.10265408673433477,False,False,post hoc diagnostic analysis
+BtoA,LightGBM_noTime,0.10964437542424213,0.09532787201631629,False,False,post hoc diagnostic analysis
+BtoA,LightGBM,0.1342188024684593,0.1445740680729127,False,False,post hoc diagnostic analysis
+BtoA,LightGBM_tuned,0.15752769440595915,0.15598898887988472,True,True,post hoc diagnostic analysis
+BtoA,Ensemble,0.13370777027614192,0.14191803175157067,False,False,post hoc diagnostic analysis

@@ -34,7 +34,7 @@ The data are **not** redistributed here. The notebook downloads the public train
 3. Run all cells. Outputs are written to Google Drive under `SepsisGuard_CP_outputs/<RUN_MODE>/` (tables, figures, `RUN_SUMMARY.md`, `MODEL_CARD.md`); every stage is checkpointed, so an interrupted session resumes from the last finished step.
 4. Do not edit Cell 21e: on its first run it writes `PROTOCOL_v9_LOCK.json`, and later runs stop if the protocol text no longer matches the stored fingerprint.
 
-The figure scripts in `manuscript_figures/scripts/` read `results/tables/` and redraw Figs 1–6 and S1–S2 (Figs S3–S4 need the row-level predictions written by the notebook to `results/predictions/`).
+The figure scripts in `manuscript_figures/scripts/` read `results/tables/` and redraw the article figures: `figs.py` draws Figs 1, 2, 4, 5, 7 and 8, `figs_diagnosis.py` draws Figs 3 and 6 and Figs S5–S7, and `suppfigs.py` draws Figs S1–S2 (Figs S3–S4 need the row-level predictions written by the notebook to `results/predictions/`).
 
 ## Mapping of article items to result tables
 
@@ -42,12 +42,17 @@ The figure scripts in `manuscript_figures/scripts/` read `results/tables/` and r
 |---|---|
 | Table 2 (cohorts) | T01, T03 |
 | Table 3, Fig. 2 (discrimination) | T41 |
-| Table 4, Fig. 3 (calibration and coverage) | T43 |
-| Table 5, Fig. 4 (clinical endpoint) | T42, T47 |
-| Fig. 5 (local label budget) | T44b, T48 |
-| Fig. 6 (retraining) | T45 |
+| Table 4, Fig. 3 (calibration intercept, slope and curves) | T49, T49b |
+| Table 5, Fig. 4 (class-conditional coverage) | T43 |
+| Table 6, Fig. 5 (clinical endpoint) | T42, T47 |
+| Table 7, Fig. 6 (diagnosis of miscalibration) | T50, T51, T53, T53b |
+| Fig. 7 (local label budget) | T44b, T48 |
+| Fig. 8 (retraining) | T45 |
 | Locked hypotheses H1–H5 | T46 |
-| Table 6 and supplementary tables | T05–T33 |
+| Table 8 and Additional file 1 Tables S1–S17 | T05–T33 |
+| Additional file 1 Tables S18–S23, Figs S5–S7 (post hoc analyses) | T50, T50b, T51–T56b |
+
+Tables T40–T48 come from the locked bidirectional analysis (Cells 21e–21h). Tables T49–T56b come from analyses added after the protocol was locked (Cells 21i–21j) and are labeled post hoc in the article.
 
 ## Citation
 
